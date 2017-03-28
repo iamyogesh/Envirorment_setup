@@ -1,0 +1,27 @@
+file beat :
+-----------------------------------
+start filebear service
+=============================
+/etc/init.d/filebeat status
+
+to change configuration
+=========================
+vi /etc/filebeat/filebeat.yml
+
+filebeat.yml
+
+to test config
+=======================
+to start config file
+
+$cd /usr/bin
+
+$sh filebeat.sh -configtest -e
+
+./filebeat.sh -e -c filebeat.yml -d "publish"
+
+
+to delete the registery
+================================
+cd /var/lib/filebeat/
+rm registry
