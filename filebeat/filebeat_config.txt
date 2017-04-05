@@ -1,0 +1,44 @@
+
+file beat :
+-----------------------------------
+start filebeat service
+=============================
+/etc/init.d/filebeat status
+
+to change configuration
+=========================
+vi /etc/filebeat/filebeat.yml
+
+to test config
+=======================
+to start config file
+
+$cd /usr/bin
+
+$sh filebeat.sh -configtest -e
+
+./filebeat.sh -e -c filebeat.yml -d "publish"
+
+
+to delete the registery
+================================
+cd /var/lib/filebeat/
+rm registry
+
+
+Add shortcut to bashrc
+
+vi ~/.bashrc
+
+alias cs="systemctl status collectd.service"
+alias cr="systemctl restart collectd.service"
+alias fs="/etc/init.d/filebeat status"
+alias fr="/etc/init.d/filebeat restart"
+alias fstop="/etc/init.d/filebeat stop"
+alias fstart="/etc/init.d/filebeat start"
+alias fe="vi /etc/filebeat/filebeat.yml"
+
+alias fc="sh filebeat.sh -configtest -e"
+alias cdf="cd /usr/bin/"
+alias fp='./filebeat.sh -e -c filebeat.yml -d "publish"'
+alias fd='rm /var/lib/filebeat/registry'
