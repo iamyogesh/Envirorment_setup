@@ -1,4 +1,4 @@
-Collectd 
+steps to install Collectd 
 -------------------------------
 
 sudo yum install epel-release
@@ -6,7 +6,7 @@ sudo yum install collectd
 
 service collectd status
 systemctl restart collectd.service
-vi /etc/collectd.conf
+vi /etc/collectd.d/collectd.conf
 
 systemctl status collectd.service
 
